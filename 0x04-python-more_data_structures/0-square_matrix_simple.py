@@ -1,8 +1,13 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    new_matrix = matrix.copy()
+    squared_matrix = []
 
-    for i in range(len(matrix)):
-        new_matrix[i] = list(map(lambda x: x**2, matrix[i]))
+    for row in matrix:
+        squared_row = []
 
-        return (new_matrix)
+        for element in row:
+            squared_row.append(element ** 2)
+
+        squared_matrix.append(squared_row)
+
+    return (squared_matrix)
