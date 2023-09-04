@@ -7,7 +7,6 @@ Define a rectangle class
 class Rectangle:
     """A class that represents a rectangle"""
 
-
     def __init__(self, width=0, height=0):
         """
         Initialise a new Rectangle
