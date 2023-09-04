@@ -23,12 +23,10 @@ class Rectangle:
         """
         Get width of rectangle
 
-        Args:
-        value (int): The value
+        Returns:
+        int: The width
 
-        Returns: AN integer value
-
-        RAises:
+        Raises:
         TypeError: if value is not an integer
         ValueError: if value is less than zero
         """
@@ -47,11 +45,12 @@ class Rectangle:
     def height(self):
         """
         Get height of the rectangle
-        value (int): The value
 
-        Returns: AN integer value
 
-        RAises:
+        Returns:
+        int:the height
+
+        Raises:
         TypeError: if value is not an integer
         ValueError: if value is less than zero
 
