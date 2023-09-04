@@ -83,7 +83,7 @@ class Rectangle:
             return ("")
         rectangle_str = ""
         for row in range(self.__height):
-            rectangle_str += "#" * self.__width + "\n"
+            rectangle_str += str(self.print_symbol) * self.__width + "\n"
         return rectangle_str.rstrip()
 
     def __str__(self):
