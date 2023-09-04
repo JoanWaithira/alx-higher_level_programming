@@ -87,17 +87,26 @@ class Rectangle:
         return rectangle_str.rstrip()
 
     def __str__(self):
+        """
+        Return string representation
+        """
         return ("{}".format(self.my_print()))
 
     def __repr__(self):
         return ("Rectangle({}, {})".format(str(self.width), str(self.height)))
 
     def __del__(self):
+        """
+        Destructor of the instance of class Rectangle
+        """
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
+        """
+        Returns the instance of rectangele with larger area
+        """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
@@ -110,5 +119,6 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """ REturn a new class with width and height"""
+        """ REturn a new class with width and height
+        width == height == size"""
         return cls(size, size)
