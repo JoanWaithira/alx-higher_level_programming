@@ -1,1 +1,60 @@
-import unittest
+===================================
+How to use the 0-add_integer.py
+===================================
+
+This tests for the function: ``add_integer(a, b)``
+
+The parameters should be of type int.
+The sum of the parameters is returned
+
+Usage
+=====
+
+Import the ``add_integer``
+        >>> add_integer = __import__('0-add_integer').add_integer
+
+Numbers
+=======
+        >>> add_integer(1, 2)
+        3
+
+        >>> add_integer(2, 4)
+        6
+
+        >>> add_integer(-100, 30)
+        -70
+
+Floating Numbers - Converted to integers
+========================================
+        >>> add_integer(7.6, 2.7)
+        10
+
+        >>> add_integer(-5.3, 4.9)
+        0 
+
+Strings - They should return TypeError
+======================================
+
+        >>> add_integer(12, "Python")
+        Traceback (most recent call last):
+        ....
+        TypeError: b must be an integer
+
+
+        >>> add_integer("Python", "Programming")
+        Traceback (most recent call last):
+        ...
+        TypeError: a must be an integer
+
+Complex numbers and None values
+================================
+	>>> add_integer(None)
+        Traceback (most recent call last):
+        ...
+        TypeError: a must be an integer
+
+        >>> add_integer(None, None)
+        Traceback (most recent call last):
+        ...
+        TypeError: a must be an integer
+

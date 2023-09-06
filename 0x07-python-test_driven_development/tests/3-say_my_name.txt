@@ -1,0 +1,31 @@
+===============================================
+Test for say_my_name(first_name, last_name=""):
+==============================================
+How it works
+	>>> say_my_name(" Joan", 'Waithira   123  ')
+	My name is  Joan  Waithira   123  
+
+	>>> say_my_name(" Joan", 'Waithira')
+        My name is  Joan  Waithira
+
+first name tests
+===============
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+	>>> say_my_name(None, "Waithira")
+	Traceback (most recent call last):
+	    ...
+	TypeError: first_name must be a string
+
+If name is an integer
+====================
+	>>> say_my_name(25, "Waithira")
+	Traceback (most recent call last):
+	    ...
+	TypeError: first_name must be a string
+
+Last name tests
+==============
+	>>> say_my_name("Waithira", 25)
+        Traceback (most recent call last):
+            ...
+        TypeError: last_name must be a string
