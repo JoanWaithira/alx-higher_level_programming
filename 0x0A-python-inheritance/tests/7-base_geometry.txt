@@ -1,0 +1,34 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+
+# Test cases for integer_validator method
+>>> bg.integer_validator("Joan", 42)
+# This should pass, as 42 is an integer.
+
+>>> bg.integer_validator("Joan", "56")
+# This should raise a TypeError since "56" is a string, not an integer.
+
+>>> bg.integer_validator("Peter", -10)
+# This should raise a ValueError since -10 is not greater than 0.
+
+>>> bg.integer_validator("Joan", 0)
+# This should raise a ValueError since 0 is not greater than 0.
+
+>>> bg.integer_validator("Joan", (123,))
+# This should raise a TypeError since (123,) is a tuple, not an integer.
+
+>>> bg.integer_validator("Joan", [87])
+# This should raise a TypeError since [87] is a list, not an integer.
+
+>>> bg.integer_validator("Joan", 87.5)
+# This should raise a TypeError since 87.5 is a float, not an integer.
+
+>>> bg.integer_validator("Joan", -5.8)
+# This should raise a TypeError since -5.8 is a float, not an integer.
+
+>>> bg.integer_validator("Joan", {"python": 98})
+# This should raise a TypeError since {"python": 98} is a dictionary, not an integer.
+
+>>> bg.integer_validator("Joan", 3.14)
+# This should raise a TypeError since 3.14 is a float, not an integer.
+
