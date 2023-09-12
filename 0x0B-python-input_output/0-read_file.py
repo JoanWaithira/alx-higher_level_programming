@@ -1,19 +1,20 @@
 #!/usr/bin/python3
 """
-A function that performs i/o
+A function that performs file writing
 """
 
 
-def write_file(filename="", text=""):
+def read_file(filename=""):
     """
     A function that writes a file
 
     Args:
     filename(str): filename of file to be read
     text: bytes to be written
+
+    Returns:
+    Number of characters written
     """
 
-    with open(filename, "w", encoding="utf-8") as my_file:
-        chars_written = my_file.write(text)
-
-    return chars_written
+    with open(filename,, encoding="utf-8") as my_file:
+        print(my_file.read(), end="")
