@@ -12,5 +12,5 @@ def load_from_json_file(filename):
     Args:
     filename(str): json file
     """
-    with open(filename, "r+", encoding="utf-8") as my_file:
-        return (json.load(my_file))
+    with open(filename) as my_file:
+        return json.load(my_file)
