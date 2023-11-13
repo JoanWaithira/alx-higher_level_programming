@@ -4,8 +4,4 @@ const arg = process.argv[2];
 
 const convertedNumber = parseInt(arg);
 
-if (isNan(number)) {
-	console.log('Not a number');
-} else {
-	console.log(`My number: ${number}`);
-}
+console.log(isNaN(convertedNumber) ? 'Not a number' : 'My number: ' + convertedNumber);
