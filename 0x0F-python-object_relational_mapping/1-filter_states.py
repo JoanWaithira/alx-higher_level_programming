@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Filter states"""
+
+
 import MySQLdb
 import sys
 
@@ -16,10 +19,9 @@ if __name__ == "__main__":
         charset="utf8"
     )
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
+    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
     rows = cursor.fetchall()
     for row in rows:
-        if row[1].startswith("N"):
-            print(row)
+        print(row)
     cursor.close()
     db.close()
