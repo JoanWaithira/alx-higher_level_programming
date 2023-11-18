@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Listing states"""
+
+
 import MySQLdb
 import sys
 
