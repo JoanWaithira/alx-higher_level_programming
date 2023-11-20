@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Filter states"""
+
+"""
+Filter states
+"""
 
 
 import MySQLdb
