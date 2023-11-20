@@ -19,12 +19,12 @@ if __name__ == "__main__":
         charset="utf8"
     )
     cursor = db.cursor()
-    
-    cursor.execute(
-        "SELECT * FROM states WHERE name LIKE %s ORDER\
-            BY id ASC",
-        (sys.argv[4],),
-    )
+
+    query = "SELECT cities.id, cities.name, states.name FROM cities " \
+            "JOIN states ON cities.state_id = states.id " \
+            "ORDER BY cities.id ASC;"
+
+    cursor.execute(query)
     rows = cursor.fetchall()
     for row in rows:
         print(row)
