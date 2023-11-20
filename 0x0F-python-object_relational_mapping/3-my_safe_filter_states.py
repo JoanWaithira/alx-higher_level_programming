@@ -20,11 +20,11 @@ if __name__ == "__main__":
         charset="utf8"
     )
     cursor = db.cursor()
-    query = """SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY states.id ASC"""
-    query = query.format(state_name)
-    cursor.execute(query)
+    
+    cursor.execute("SELECT * FROM states WHERE name = %s ORDER BY states.id ASC",
+                (state_name, ))
     rows = cursor.fetchall()
     for row in rows:
         print(row)
     cursor.close()
-    db.close()
+    db.close
