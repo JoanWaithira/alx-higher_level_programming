@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """List all states"""
+import sys
 from sys import argv
 from model_state import Base, State
 from sqlalchemy import (create_engine)
